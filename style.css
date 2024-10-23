@@ -1,0 +1,136 @@
+:root{
+    --red: hsl(0, 78%, 62%);
+    --cyan: hsl(180, 62%, 55%);
+    --orange: hsl(34, 97%, 64%);
+    --blue: hsl(212, 86%, 64%);
+    --very-dark-blue: hsl(234, 12%, 34%);
+    --grayish-blue: hsl(229, 6%, 66%);
+    --very-light-gray: hsl(0, 0%, 98%);
+}
+
+html{
+    font-size: 15px;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    font-family: "Poppins", sans-serif;
+    font-style: normal;
+    background-color: hsl(0, 0% 95%);
+}
+
+.main-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 5.33rem auto;
+    gap: 4.267rem;
+}
+
+
+
+.container1{
+    max-width: 36rem;
+    max-height: 11.2rem;
+    text-align: center;
+}
+
+.upper-heading{
+    font-weight: 200;
+    letter-spacing: 0.016rem;
+    margin: 0;
+    color: var(--very-dark-blue);
+}
+
+.lower-heading{
+    font-weight: 600;
+    margin: 0;
+    margin-top: 2px;
+}
+
+p{
+    font-weight: 400;
+    opacity: 50%;
+    color: var(--very-dark-blue);
+    margin: 0;
+}
+
+h2{
+    font-weight: 600;
+    font-size: 1.33rem;
+    margin: 0 0 0.4rem 0;
+}
+
+.container1 p{
+    font-size: 1rem;
+    line-height: 1.67rem;
+}
+
+.container2{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto auto;
+    grid-template-areas: 
+    "supervisor team calculator"
+    "supervisor karma calculator"; /*layout structure for boxes*/
+    place-items: center;
+    gap: 2rem;
+}
+
+
+.box{
+    max-width: 23.33rem;
+    height: 16.67rem;
+    border-radius: 1%;
+    display: flex;
+    flex-direction: column;
+    padding: 2.13rem;
+    box-shadow: 0px 4px 4px 0px hsl(234, 12%, 34%); 
+}
+
+.box img{
+    align-self: flex-end;
+    margin-top: auto;
+}
+
+.supervisor{
+    grid-area: supervisor;
+    border-top:3px solid var(--cyan);
+}
+
+.team{
+    grid-area: team;
+    border-top:3px solid var(--red);
+}
+
+.karma{
+    grid-area: karma;
+    border-top:3px solid var(--orange);
+}
+
+.calculator{
+    grid-area: calculator;
+    border-top:3px solid var(--blue);
+}
+
+@media screen and (max-width:50rem){
+    .container2{
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    .main-container{
+        margin-right: 2.13rem;
+        margin-left: 2.13rem;
+    }
+
+    .upper-heading, .lower-heading{
+        font-size: 1.6rem;
+    }
+
+}
+
